@@ -1,0 +1,439 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Gusto Globe</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@900&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat&display=swap" rel="stylesheet">
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      font-family: 'Playfair Display', serif;
+      background-color: rgb(243, 239, 228);
+    }
+
+    .top-bar {
+      display: grid;
+      grid-template-columns: 80px 550px auto auto auto auto 150px; 
+      align-items: center;
+      padding: 20px;
+    }
+
+    .logo-image img {
+      height: 80px;
+      width: auto;
+      object-fit: contain;
+    }
+
+    .restaurant-heading {
+      font-weight: 900;
+      font-style: italic;
+      font-size: 50px;
+    }
+
+    .top-bar a {
+      font-family: 'Montserrat', sans-serif;
+      font-size: 18px;
+      margin: 0;
+      padding-left: 0;
+      border-radius: 4px;
+      text-decoration: none;
+      color: black;
+      display: inline-block;
+    }
+
+    .top-bar a:hover {
+      color: rgb(193, 68, 62);
+      cursor: pointer;
+      transform: scale(1.2);
+      transition: transform 0.3s ease;
+    }
+
+    .reserve-button {
+      background-color: rgb(193, 68, 62);
+      color: white;
+      font-weight: 600;
+      transition: all 0.3s ease;
+      padding: 10px 10px;
+      text-align: center; 
+      justify-self: end;
+      white-space: nowrap;
+      padding-left: 10px;
+    }
+
+    .reserve-button:hover {
+      background-color: #a0312c;
+      transform: scale(1.1);
+    }
+
+    .hero-with-thumbnails {
+      position: relative;
+      background-image: url('pictures/cover-page-1.png');
+      background-size: cover;
+      background-position: center;
+      height: 100vh;
+      color: #F9F6F1;
+      display: flex;
+      align-items: center;
+      padding-left: 60px;
+    }
+
+    .hero-text {
+      max-width: 500px;
+    }
+
+    .hero-text h1 {
+      font-size: 56px;
+      color: darkgoldenrod;
+      background-color: white;
+      padding: 10px;
+    }
+
+    .hero-text p {
+      font-size: 20px;
+      font-family: 'Montserrat', sans-serif;
+      margin-top: 10px;
+    }
+
+    .two-column-section {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      align-items: start;
+      padding: 20px;
+      gap: 30px;
+    }
+
+    .slideshow {
+      position: relative;
+      width: 100%;
+      height: 100%;
+    }
+
+    .slideshow img {
+      position: absolute;
+      width: 100%;
+      height: 700px;
+      object-fit: cover;
+      opacity: 0;
+      animation: fade 15s infinite;
+      border-radius: 8px;
+    }
+
+    .slideshow img:nth-child(1) { animation-delay: 0s; }
+    .slideshow img:nth-child(2) { animation-delay: 3s; }
+    .slideshow img:nth-child(3) { animation-delay: 6s; }
+    .slideshow img:nth-child(4) { animation-delay: 9s; }
+    .slideshow img:nth-child(5) { animation-delay: 12s; }
+
+    @keyframes fade {
+      0%   { opacity: 0; }
+      10%  { opacity: 1; }
+      30%  { opacity: 1; }
+      40%  { opacity: 0; }
+      100% { opacity: 0; }
+    }
+
+    .why-gusto-globe {
+      max-width: 1000px;
+      margin: 0 auto;
+      padding: 20px;
+    }
+
+    .why-heading {
+      font-family: 'Playfair Display', serif;
+      font-size: 65px;
+      margin-top: 0;
+    }
+
+    .why-content {
+      font-family: 'Montserrat', sans-serif;
+      font-size: 18px;
+      line-height: 1.7;
+      margin-top: 30px;
+      margin-bottom: 20px;
+    }
+
+    .quote {
+      font-family: 'Playfair Display', serif;
+      font-size: 25px;
+      font-weight: 500;
+      margin-top: 20px;
+    }
+
+    .signature-dishes-heading {
+      font-family: 'Playfair Display', serif;
+      color: black;
+      display: inline-block;
+      font-size: 65px;
+      text-align: center;
+      margin-top: 200px;
+      margin-left: 400px;
+    }
+
+    .signature-dishes {
+      display: grid;
+      grid-template-columns: repeat(5, 1fr);
+      gap: 20px;
+      padding: 20px;
+    }
+
+    .signature-dishes img {
+      width: 100%;
+      height: 300px;
+      object-fit: cover;
+      border-radius: 8px;
+    }
+
+    .description-grid {
+      display: grid;
+      grid-template-columns: repeat(5, 1fr);
+      gap: 20px;
+      padding: 20px;
+      font-family: 'Montserrat', sans-serif;
+      font-size: 16px;
+      text-align: center;
+    }
+
+    .description-grid div {
+      background-color: #fff8f2;
+      border-radius: 8px;
+      padding: 15px;
+      box-shadow: 0px 2px 6px rgba(0,0,0,0.1);
+      transition: all 0.3s ease;
+    }
+
+    .description-grid div:hover {
+      background-color: rgb(255, 234, 220);
+      transform: translateY(-5px) scale(1.05);
+      box-shadow: 0px 4px 12px rgba(0,0,0,0.15);
+    }
+
+    .testimonial-section {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 20px;
+    }
+
+    .guest-testimonials {
+      background-color: #fff8f2;
+      padding: 80px 30px;
+    }
+
+    .testimonial-heading {
+      font-family: 'Playfair Display', serif;
+      font-size: 60px;
+      color: darkgoldenrod;
+      margin-bottom: 50px;
+      margin-left: 170px;
+    }
+
+    .testimonial-slideshow {
+      position: relative;
+      max-width: 900px;
+      padding-top: 20px;
+      margin-left: 20px;
+      min-height: 160px;
+      font-family: 'Montserrat', sans-serif;
+      font-size: 22px;
+      color: #333;
+    }
+
+    .testimonial {
+      display: none;
+      opacity: 0;
+      transition: opacity 1s ease;
+      text-align: center;
+      padding-left: 0px;
+    }
+
+    .testimonial.active {
+      display: block;
+      opacity: 1;
+      text-align: center;
+    }
+
+    .author {
+      display: block;
+      margin-top: 16px;
+      font-family: 'Playfair Display', serif;
+      font-size: 20px;
+      color: rgb(193, 68, 62);
+      text-align: center;
+    }
+
+    .feedback-button {
+      position: absolute;
+      height: 50px;
+      width: 300px;
+      left: 1000px;
+      top: 50%;
+      transform: translateY(-50%);
+    }
+
+    .feedback-button button {
+      padding: 20px 20px;
+      font-size: 20px;
+      background-color: #ff874f;
+      color: white;
+      border: none;
+      border-radius: 8px;
+      cursor: pointer;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+      text-align: center;
+    }
+
+    .feedback-button button:hover {
+      transform: scale(1.05);
+      box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+    }
+
+    .site-footer {
+      background-color: rgb(122, 92, 76);
+      padding: 40px 20px;
+      font-family: 'Montserrat', sans-serif;
+      font-size: 16px;
+      color: #333;
+    }
+
+    .footer-top {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+      border-bottom: 1px solid #ddd;
+      padding-bottom: 30px;
+    }
+
+    .footer-logos {
+      display: flex;
+      gap: 20px;
+      cursor: pointer;
+    }
+
+    .footer-logos img {
+      height: 50px;
+      width: 50px;
+      object-fit: contain;
+    }
+
+    .footer-contact {
+      text-align: right;
+      color: white;
+    }
+
+    .footer-bottom {
+      text-align: center;
+      margin-top: 20px;
+      font-size: 15px;
+      color: white;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="top-bar">
+    <div class="logo-image"><img src="pictures/logo.jpeg" alt="Logo"></div>
+    <div class="restaurant-heading">Gusto Globe</div>
+    <a href="2-about.html">About Us</a>
+    <a href="3-events.html">Events</a>
+    <a href="4-dining-experience.html">Dining Experience</a>
+    <a href="5-chefs.html">Our Chefs</a>
+    <a href="6-menu.html" class="reserve-button">Reserve Now</a>
+  </div>
+
+ <section class="hero-with-thumbnails">
+    <div class="hero-text">
+      <h1>Experience Flavours Without Borders</h1>
+      <p>Global inspirations, local soul — discover fusion like never before at Gusto Globe.</p>
+    </div>
+  </section>
+
+  <section class="two-column-section">
+    <div class="slideshow">
+      <img src="pictures/slideshow image 1.jpg" alt="Dish 1">
+      <img src="pictures/slideshow image 2.png" alt="Dish 2">
+      <img src="pictures/slideshow image 3.jpg" alt="Dish 3">
+      <img src="pictures/slideshow image 4.jpg" alt="Dish 4">
+      <img src="pictures/slideshow image 5.jpg" alt="Dish 5">
+    </div>
+
+    <div class="why-gusto-globe">
+      <div class="why-heading">Why Gusto Globe?</div>
+      <div class="why-content">
+        At Gusto Globe, fusion isn’t just a style — it’s a philosophy. We create dishes where global traditions meet Indian soul. Imagine Tandoori Lasagna, Masala Ramen, or Biryani Arancini — each plate is a thoughtful blend of cultures, delivering a flavor that feels both exciting and comfortingly familiar.<br><br>
+        Our culinary journey is rooted in balance and respect. Every recipe is the result of careful research, creative experimentation, and a deep passion for storytelling through food. We don’t aim to overpower one tradition with another — instead, we let flavors coexist harmoniously, celebrating cultural diversity on every plate.<br><br>
+        This is more than dining; it’s an experience. With every bite, we invite you to explore the world — one dish at a time. Whether you're a seasoned foodie or an adventurous eater, Gusto Globe promises a journey that surprises, satisfies, and stays with you.
+        <div class="quote">"One World, Many Cultures, Infinite Flavours"</div>
+      </div>
+    </div>
+  </section>
+
+  <div class="signature-dishes-heading">Our Signature Dishes</div>
+
+  <section class="signature-dishes">
+    <img src="pictures/chicken tikka lasanga.jpg" alt="Dish 1">
+    <img src="pictures/rasamalai tiramisu.jpg" alt="Dish 2">
+    <img src="pictures/spicy tofu tacos.jpg" alt="Dish 3">
+    <img src="pictures/sushi buritto.jpg" alt="Dish 4">
+    <img src="pictures/falafel nachos.jpg" alt="Dish 5">
+  </section>
+
+  <section class="description-grid">
+    <div><strong>Chicken Tikka Lasanga</strong><br><br>Expertly blends Indian smoky spices with the cheesy layers of Italian lasagna.</div>
+    <div><strong>Rasamalai Tiramisu</strong><br><br>Milky sweetness meets the coffee-rich creaminess of Italian tiramisu.</div>
+    <div><strong>Spicy Tofu Tacos</strong><br><br>Plant-based punch in soft shells — fiery and flavorful.</div>
+    <div><strong>Sushi Burritos</strong><br><br>Fresh sushi flavors, burrito-style convenience.</div>
+    <div><strong>Falafel Nachos</strong><br><br>Crunchy falafel base with Mediterranean toppings — a new kind of nacho.</div>
+  </section>
+
+  <section class="guest-testimonials">
+    <div class="testimonial-heading">What Our Guests Say</div>
+    <div class="testimonial-slideshow">
+      <div class="testimonial active">“Gusto Globe takes you on a journey — every dish is a passport stamp in flavor!”<div class="author">– Arjun M.</div></div>
+      <div class="testimonial">“From Masala Ramen to Churro Gulab Jamun... just wow!”<div class="author">– Priya S.</div></div>
+      <div class="testimonial">“Elegantly plated. Thoughtfully crafted. Truly a global affair.”<div class="author">– Rajiv K.</div></div>
+      <div class="testimonial">“Each visit redefines dining — I always leave inspired.”<div class="author">– Lavanya D.</div></div>
+      <div class="testimonial">"Thai Green Curry Risotto delivered comfort and excitement in every bite." <div class="author">– David Lee</div></div>
+      <div class="testimonial">“An unforgettable sensory journey. Highly recommended.”<div class="author">– Ananya R.</div></div>
+      <div class="testimonial">“Global flavors that still feel like home.”<div class="author">– Harish P.</div></div>
+      <div class="feedback-button"><button>SHARE YOUR FEEDBACK</button></div> 
+    </div>
+  </section>
+
+  <footer class="site-footer">
+    <div class="footer-top">
+      <div class="footer-logos">
+        <img src="pictures/instagram.webp" alt="Instagram">
+        <img src="pictures/x.webp" alt="X">
+        <img src="pictures/linkedin.webp" alt="LinkedIn">
+        <img src="pictures/youtube.png" alt="YouTube">
+      </div>
+
+      <div class="footer-contact">
+        <p><strong>Gusto Globe</strong><br>
+        123 Fusion Avenue, Chennai<br>
+        Phone: +91 98765 43210<br>
+        Email: hello@gustoglobe.com</p>
+      </div>
+    </div>
+
+    <div class="footer-bottom">
+      <p><strong>Our Branches:</strong> Chennai • Bengaluru • Hyderabad • Kuala Lumpur • Tokyo • Bali • Vietnam • Florida</p>
+    </div>
+  </footer>
+
+  <script>
+    const testimonials = document.querySelectorAll('.testimonial');
+    let index = 0;
+    setInterval(() => {
+      testimonials[index].classList.remove('active');
+      index = (index + 1) % testimonials.length;
+      testimonials[index].classList.add('active');
+    }, 4000); // 4 seconds per testimonial
+  </script>
+</body>
+</html>
