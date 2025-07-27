@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Events | Gusto Globe</title>
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@900&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat&display=swap" rel="stylesheet">
+
+  <style>
+    body {
+      margin: 0px;
+      padding: 0px;
+      font-family: 'Montserrat', sans-serif;
+      background-color: rgb(247, 244, 242);
+      color: rgb(51, 51, 51);
+    }
+
+    h1 {
+      text-align: center;
+      font-family: 'Playfair Display', serif;
+      font-size: 36px;
+      margin: 40px 0px 50px;
+      color: rgb(61, 46, 43);
+    }
+
+    .events-container {
+      display: grid;
+      grid-template-columns: 2fr 1fr;
+      gap: 30px;
+      max-width: 1000px;
+      margin: 0px auto;
+      padding: 20px;
+    }
+
+    .event-box {
+      padding: 20px;
+      text-align: center;
+    }
+
+    .event-box img {
+      max-width: 100%;
+      height: auto;
+      border-radius: 10px;
+      box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+    }
+
+    .reserve-button {
+      background-color: rgb(180, 0, 0);
+      color: rgb(255, 255, 255);
+      padding: 10px 20px;
+      border: none;
+      margin-top: 10px;
+      font-family: 'Montserrat', sans-serif;
+      cursor: pointer;
+      border-radius: 4px;
+      transition: background-color 0.3s ease;
+    }
+
+    .reserve-button:hover {
+      background-color: rgb(140, 0, 0);
+    }
+
+    .posters {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 30px;
+      max-width: 1000px;
+      margin: 50px auto;
+    }
+
+    .poster-box {
+      text-align: center;
+      padding: 15px;
+      background-color: rgb(255, 255, 255);
+      border-radius: 10px;
+      box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.08);
+    }
+
+    .poster-box img {
+      width: 300px;
+      height: 300px;
+      object-fit: cover;
+      border-radius: 8px;
+      margin-bottom: 10px;
+    }
+
+    .future-events {
+      max-width: 1000px;
+      margin: 60px auto;
+      padding: 20px;
+    }
+
+    .future-events h2 {
+      text-align: center;
+      font-family: 'Playfair Display', serif;
+      font-size: 28px;
+      margin-bottom: 30px;
+      color: rgb(61, 46, 43);
+    }
+
+    .future-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 20px;
+      text-align: center;
+    }
+
+    .future-grid .column {
+      background-color: rgb(255, 255, 255);
+      padding: 20px;
+      border-radius: 10px;
+      box-shadow: 0px 2px 8px rgba(0, 0, 0, 0.05);
+    }
+
+    .future-grid .column h3 {
+      font-family: 'Playfair Display', serif;
+      margin-bottom: 15px;
+      font-size: 18px;
+      color: rgb(91, 70, 64);
+    }
+
+    .future-grid .column p {
+      margin: 10px 0px;
+      font-size: 14px;
+    }
+
+    @media (max-width: 768px) {
+      .events-container,
+      .posters,
+      .future-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .poster-box img {
+        width: 100%;
+        height: auto;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <h1>WHAT'S HAPPENING AT GUSTO GLOBE</h1>
+
+  <div class="events-container">
+    <div class="event-box">
+      <img src="pictures/major event setting.jpeg" alt="Major Event Picture">
+    </div>
+    <div class="event-box">
+      <p class="event-heading"><strong>Chef's Table: Origins of Gusto</strong></p>
+      <p class="event-date"><strong> July 31, 2025 | One Night Only</strong></p>
+      <p>A nostalgic journey through our humble beginnings — the exact recipes and stories from our alley-kitchen days. Limited seats at our founder’s table.</p>
+      <button class="reserve-button">RESERVE NOW</button>
+      <p>(only 3 hours left!)</p>
+    </div>
+  </div>
+
+  <div class="posters">
+    <div class="poster-box">
+      <img src="pictures/biriyani and bruschettas event.jpeg" alt="Event Poster 1">
+      <p><strong>Biriyani meets Bruschetta</strong></p>
+      <p>A warm-up event celebrating Mediterranean-Indian fusion. Enjoy mini bruschettas with spicy kheema, saffron risotto-stuffed peppers</p>
+      <p>Reservations open by July 28, 2025</p>
+      <p>Event Date - August 5,2025</p>
+      <button class="reserve-button">RESERVE NOW</button>
+    </div>
+    <div class="poster-box">
+      <img src="pictures/tea and tapas affair event.jpeg" alt="Event Poster 2">
+      <p><strong>Tea and Tapas Affair</strong></p>
+      <p>An elegant high-tea fusion featuring masala chai infused pastries, Spanish tortilla bites with chutney drizzle, and kulfi-tiramisu jars</p>
+      <p> Reservations open by August 10,2025</p>
+      <p>Event Date - August 20,2025</p>
+      <button class="reserve-button">RESERVE NOW</button>
+    </div>
+  </div>
+
+  <div class="future-events">
+    <h2>FUTURE EVENTS</h2>
+    <div class="future-grid">
+      <div class="column">
+        <h3>Date of the Event</h3>
+        <p>August 29, 2025</p>
+        <p>September 12, 2025</p>
+        <p>September 27, 2025</p>
+        <p>October 10, 2025</p>
+        <p>October 25, 2025</p>
+      </div>
+      <div class="column">
+        <h3>About the Event</h3>
+        <p>Flavours of the Silk Road</p>
+        <p>Saffron and Sakura</p>
+        <p>Continent on a Platter</p>
+        <p>Carnival of Cultures</p>
+        <p>Diwali Fusion Feast</p>
+      </div>
+      <div class="column">
+        <h3>Price Range</h3>
+        <p>₹799 - ₹999</p>
+        <p>₹899 - ₹1299</p>
+        <p>₹699 - ₹899</p>
+        <p>₹999 - ₹1499</p>
+        <p>₹1199 - ₹1599</p>
+      </div>
+      <div class="column">
+        <h3>Reservations Open</h3>
+        <p>August 16, 2025</p>
+        <p>Sept 1, 2025</p>
+        <p>Sept 10, 2025</p>
+        <p>Sept 25, 2025</p>
+        <p>Oct 5, 2025</p>
+      </div>
+    </div>
+  </div>
+
+</body>
+</html>
