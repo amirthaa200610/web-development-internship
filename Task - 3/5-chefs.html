@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@900&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat&display=swap" rel="stylesheet">
+  <style>
+    body {
+      font-family: 'Montserrat', sans-serif;
+      margin: 0px;
+      padding: 0px;
+      background-color: rgb(249, 246, 241);
+      color: rgb(51, 51, 51);
+    }
+
+    .section {
+      max-width: 1200px;
+      margin: 0px auto;
+      padding: 40px 20px;
+    }
+
+    .page-title {
+      font-family: 'Playfair Display', serif;
+      font-size: 48px;
+      text-align: center;
+      margin-bottom: 60px;
+      color: rgb(44, 44, 44);
+    }
+
+    .chef-section {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      gap: 40px;
+      margin-bottom: 60px;
+    }
+
+    .chef-section.reverse {
+      flex-direction: row-reverse;
+    }
+
+    .chef-section img {
+      width: 500px;
+      height: 500px;
+      border-radius: 12px;
+      object-fit: cover;
+    }
+
+    .chef-content {
+      flex: 1;
+      max-width: 600px;
+    }
+
+    .chef-content h2,
+    .chef-content h3 {
+      font-size: 32px;
+      margin-top: 0px;
+      color: rgb(44, 44, 44);
+    }
+
+    .chef-content p {
+      font-size: 18px;
+      line-height: 28px;
+      margin-right: 20px;
+      color: rgb(51, 51, 51);
+    }
+  </style>
+</head>
+<body>
+
+  <div class="section">
+    <h1 class="page-title">Meet the Culinary Masters</h1>
+
+    <!-- Main Chef -->
+    <div class="chef-section">
+      <img src="pictures/lead chef.png" alt="R-Chef">
+      <div class="chef-content">
+        <h2>Arjun Mehta</h2>
+        <p>At the helm of our kitchen is Chef Arjun Mehta, an award-winning culinary artist with over 15 years of experience. Trained at Le Cordon Bleu, Paris, he has led kitchens in Michelin-starred restaurants across Europe and Asia. Known for his expertise in global fusion, Chef Arjun has been featured in Culinary Vogue India and was awarded "Innovative Chef of the Year" in 2023.</p>
+        <p>"Cooking isn’t just about taste — it’s about telling a story on every plate."</p>
+      </div>
+    </div>
+
+    <!-- Sub-Chef 1 -->
+    <div class="chef-section reverse">
+      <img src="pictures/sub chef 1.png" alt="Sub-Chef 1">
+      <div class="chef-content">
+        <h3>Meera Nair</h3>
+        <p>A dynamic force in our kitchen, Chef Meera Nair brings creativity and finesse to every dish she touches. With a background in modern European and Indian fusion cuisine, she blends flavors with an artistic touch. Meera is the genius behind our Rasam Malai Tiramisu, a bold dessert that reimagines tradition with elegance and flair.</p>
+      </div>
+    </div>
+
+    <!-- Sub-Chef 2 -->
+    <div class="chef-section">
+      <img src="pictures/sub chef 2.png" alt="Sub-Chef 2">
+      <div class="chef-content">
+        <h3>Rohan Kapoor</h3>
+        <p>Supporting our kitchen’s creative vision is Chef Rohan Kapoor, a passionate and detail-driven sous chef with over 7 years of experience. Trained in contemporary Indian and Mediterranean cuisines, Rohan brings precision, consistency, and innovation to every service. He is the creative mind behind our unique Chicken Tikka Lasagna, a dish that perfectly blends bold Indian flavors with comforting Italian layers.</p>
+      </div>
+    </div>
+
+    <!-- Sub-Chef 3 -->
+    <div class="chef-section reverse">
+      <img src="pictures/sub chef 3.png" alt="Sub-Chef 3">
+      <div class="chef-content">
+        <h3>Ananya Rao</h3>
+        <p>With a sharp palate and a love for global flavors, Chef Ananya Rao brings balance and innovation to the table. Specializing in plant-forward and fusion concepts, she crafts dishes that are both vibrant and soulful. Her signature creation, the Falafel Nachos, is a bold twist on comfort food that has quickly become a guest favorite.</p>
+      </div>
+    </div>
+
+  </div>
+
+</body>
+</html>
