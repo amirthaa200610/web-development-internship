@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Dining Experience</title>
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat&family=Playfair+Display&display=swap" rel="stylesheet" />
+
+  <style>
+    body {
+      margin: 0px;
+      font-family: 'Montserrat', sans-serif;
+      background-color:  rgb(184, 170, 165);
+      color: rgb(51, 51, 51);
+    }
+
+    /* 360° Mirror Image Section */
+    .mirror-section {
+      width: 400px;
+      height: 400px;
+      background-size: cover;
+      background-position: center;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .mirror img {
+      background: rgba(255, 255, 255, 0.7);
+      padding: 20px 30px;
+      font-family: 'Playfair Display', serif;
+      font-size: 32px;
+      display: block;
+      border-radius: 10px;
+      width: 800px;
+      height: 600px;
+      text-align: center;
+      margin-left: 300px;
+      margin-bottom: 100px;
+    }
+
+    /* Dining Experience Section */
+    .experience-section {
+      padding: 60px 20px 40px;
+      text-align: center;
+    }
+
+    .experience-section-heading h1 {
+      font-family: 'Playfair Display', serif;
+      font-size: 40px;
+      margin-bottom: 40px;
+      text-align: center;
+      color: rgb(51, 51, 51);
+    }
+
+    .experience-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 30px;
+      margin-bottom: 40px;
+      margin-left: 20px;
+    }
+
+    .experience-box {
+      border-radius: 15px;
+      overflow: hidden;
+      transition: transform 0.3s ease;
+      box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.08);
+    }
+
+    .experience-box:hover {
+      transform: translateY(-5px);
+    }
+
+    .experience-box img {
+      width: 500px;
+      height: 500px;
+      position: relative;
+    }
+
+    .experience-title {
+      padding: 20px;
+      font-weight: bold;
+      font-size: 18px;
+      font-family: 'Montserrat', sans-serif;
+      text-align: center;
+      color: rgb(51, 51, 51);
+      background-color:  white;
+    }
+
+    .experience-description {
+      max-width: 800px;
+      margin: 0 auto;
+      font-size: 16px;
+      line-height: 25px;
+      font-family: 'Montserrat', sans-serif;
+      text-align: center;
+      margin-bottom: 50px;
+      color: rgb(51, 51, 51);
+    }
+
+    @media (max-width: 600px) {
+      .mirror-text {
+        font-size: 24px;
+        padding: 15px;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <!-- 360° Mirror Section -->
+  <div class="experience-section-heading">
+    <h1>A Dining journey beyond borders</h1>
+    <div class="mirror">
+      <img src="pictures/interior.png" alt="360° Mirror View" />
+    </div>
+  </div>
+
+  <!-- Dining Experience Section -->
+  <div class="experience-grid">
+    <!-- Box 1 -->
+    <div class="experience-box">
+      <img src="pictures/interior1.png" alt="Luxurious Interior Ambiance" />
+      <div class="experience-title">
+        Our interiors blend soft pastels, warm lighting, and spacious layouts to create a calm and elegant dining atmosphere. Natural light from tall windows adds openness, making it ideal for both casual and special moments.
+      </div>
+    </div>
+
+    <!-- Box 2 -->
+    <div class="experience-box">
+      <img src="pictures/fusion buffet.png" alt="Fusion Buffet Spread" />
+      <div class="experience-title">
+        A rich buffet spread of global flavors is beautifully arranged under chandeliers. Each dish is crafted with care, combining taste and presentation for a luxurious dining experience.
+      </div>
+    </div>
+
+    <!-- Box 3 -->
+    <div class="experience-box">
+      <img src="pictures/seating.png" alt="Seating Design" />
+      <div class="experience-title">
+        Plush emerald chairs with gold accents and cozy red booths offer a balance of style and comfort. The design adds a royal touch while ensuring a relaxed and intimate vibe.
+      </div>
+    </div>
+  </div>
+
+  <div class="experience-description">
+    Every corner of our restaurant is a reflection of thoughtful design. From artistic interiors to curated lighting and modern seating, our space complements the rich culinary experience we serve.
+  </div>
+
+</body>
+</html>
